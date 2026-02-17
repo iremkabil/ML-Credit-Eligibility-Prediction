@@ -1,58 +1,65 @@
-# Kredi Uygunluk Tahmini Projesi
+# Credit Eligibility Prediction Project
 
-Bu proje, makine öğrenmesi teknikleri kullanarak kredi başvurularının uygunluğunu tahmin etmeye yönelik bir çalışmadır. Proje kapsamında veri analizi, ön işleme, modelleme, hiperparametre optimizasyonu ve model açıklanabilirliği adımları gerçekleştirilmiştir.
+This project focuses on predicting the eligibility of loan applications using machine learning techniques. The workflow includes data analysis, preprocessing, modeling, hyperparameter optimization, and model explainability.
 
 ---
 
-## Proje Amacı
-Kredi başvurularının onaylanıp onaylanmayacağını tahmin etmek için çeşitli makine öğrenmesi algoritmaları kullanılmıştır. Amaç, bankaların ve finans kuruluşlarının başvuruları daha hızlı ve doğru şekilde değerlendirmesini sağlamaktır.
+## Project Objective
 
-## Veri Seti Açıklaması
- - **Ham Veri:** Başvuru sahiplerine ait demografik bilgiler, gelir, kredi geçmişi, istihdam durumu gibi değişkenler içerir.
- - **İşlenmiş Veri:** Eksik değerler doldurulmuş, kategorik değişkenler kodlanmış ve SMOTE ile dengesiz veri problemi çözülmüştür.
- - **Özellik Listesi:** Nihai modelde kullanılan en anlamlı değişkenler `final_feature_list.json` dosyasında tutulur.
+Various machine learning algorithms are used to predict whether a loan application will be approved. The goal is to help banks and financial institutions evaluate applications faster and more accurately.
 
-## Proje Yapısı
+---
 
-## Proje Yapısı
+## Dataset Description
 
-```
-Kredi_Uygunluk_Tahmini/
-├── veri_setleri_aciklama.md
+- **Raw Data:** Contains demographic information, income, credit history, and employment status of applicants.
+- **Processed Data:** Missing values are handled, categorical variables are encoded, and class imbalance is addressed using SMOTE.
+- **Feature List:** The most important features used in the final model are stored in `final_feature_list.json`.
+
+---
+
+## Project Structure
+
+Credit_Eligibility_Prediction/
+├── dataset_description.md
 ├── data/
-│   ├── processed/
-│   └── raw/
+│ ├── processed/
+│ └── raw/
 ├── notebooks/
-│   ├── 01_eda.ipynb
-│   ├── 02_preprocessing_and_feature_engineering.ipynb
-│   └── 03_modeling.ipynb
-```
+│ ├── 01_eda.ipynb
+│ ├── 02_preprocessing_and_feature_engineering.ipynb
+│ └── 03_modeling.ipynb
 
-- **data/raw/**: Ham veri dosyaları
-- **data/processed/**: İşlenmiş ve özellik mühendisliği uygulanmış veri dosyaları
-- **notebooks/**: Analiz, ön işleme ve modelleme adımlarını içeren Jupyter notebook dosyaları
-- **veri_setleri_aciklama.md**: Veri seti ve değişken açıklamaları
+- **data/raw/**: Raw dataset files  
+- **data/processed/**: Preprocessed data with feature engineering applied  
+- **notebooks/**: Jupyter notebooks for analysis, preprocessing, and modeling  
+- **dataset_description.md**: Dataset and feature explanations  
 
+---
 
+## Workflow
 
-## Adımlar
-1. **Keşifsel Veri Analizi (EDA)**: Veri setinin incelenmesi ve ilk analizler (`01_eda.ipynb`)
-2. **Ön İşleme & Özellik Mühendisliği**: Eksik değerlerin doldurulması, kategorik değişkenlerin kodlanması, SMOTE ile dengesiz veri problemi çözümü (`02_preprocessing_and_feature_engineering.ipynb`)
-3. **Modelleme & Değerlendirme**: Farklı makine öğrenmesi algoritmaları ile model kurulumu, karşılaştırma ve hiperparametre optimizasyonu (`03_modeling.ipynb`)
-4. **Model Açıklanabilirliği**: SHAP ile model kararlarının yorumlanması (`03_modeling.ipynb`)
+1. **Exploratory Data Analysis (EDA):** Initial data exploration and visualization (`01_eda.ipynb`)
+2. **Preprocessing & Feature Engineering:** Handling missing values, encoding categorical variables, and solving class imbalance using SMOTE (`02_preprocessing_and_feature_engineering.ipynb`)
+3. **Modeling & Evaluation:** Training multiple machine learning models, comparison, and hyperparameter optimization (`03_modeling.ipynb`)
+4. **Model Explainability:** Interpreting model predictions using SHAP (`03_modeling.ipynb`)
 
-## Kullanılan Kütüphaneler
- - pandas, numpy: Veri işleme ve analiz
- - scikit-learn: Makine öğrenmesi algoritmaları ve metrikler
- - matplotlib, seaborn: Görselleştirme
- - shap: Model açıklanabilirliği
+---
 
-## Çalıştırma
-1. Gerekli Python kütüphanelerini yükleyin:
-   ```bash
-   pip install pandas numpy scikit-learn matplotlib seaborn shap
-   ```
-2. Notebook dosyalarını sırasıyla çalıştırın.
+## Libraries Used
 
+- pandas, numpy – Data processing and analysis  
+- scikit-learn – Machine learning algorithms and evaluation metrics  
+- matplotlib, seaborn – Visualization  
+- shap – Model explainability  
 
+---
 
+## How to Run
+
+1. Install required Python libraries:
+
+```bash
+pip install pandas numpy scikit-learn matplotlib seaborn shap
+
+⚠️ This project is for educational and portfolio purposes.
